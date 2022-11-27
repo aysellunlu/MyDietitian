@@ -24,11 +24,11 @@ const styles = StyleSheet.create({
   },
   text: {
     color: "yellow",
-    fontSize: 14,
+    fontSize: 12,
   },
   textBold: {
-    color: "yellow",
-    fontSize: 14,
+    color: "white",
+    fontSize: 12,
     fontWeight: "bold",
   },
 });

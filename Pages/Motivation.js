@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
   textHeader: {
     color: "green",
     fontWeight: "bold",
-    fontSize: 20,
+    fontSize: 18,
   },
   textParagraph: {
     color: "black",
