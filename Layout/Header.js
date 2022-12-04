@@ -5,8 +5,12 @@ import HeaderAccount from "../Components/HeaderAccount";
 const Header = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Diyetisyenim</Text>
+      <View>
+        <Text style={styles.text}>Diyetisyenim</Text>
+      </View>
+      <View>
       <HeaderAccount />
+      </View>
     </View>
   );
 };
@@ -24,5 +28,9 @@ const styles = StyleSheet.create({
     color: "white",
     fontWeight: "bold",
     fontSize: 18,
+  },
+  row: {
+    flexDirection: "row",
+    flexWrap: "wrap",
   },
 });

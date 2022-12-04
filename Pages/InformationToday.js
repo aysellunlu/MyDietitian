@@ -1,20 +1,11 @@
-import { View, Text, StyleSheet, Image, ScrollView } from "react-native";
+import { View, Text, StyleSheet, ScrollView, Image } from "react-native";
 import React from "react";
 
-const Motivation = () => {
+const InformationToday = () => {
   return (
     <ScrollView style={styles.containerPage}>
       <View>
-        <Text style={styles.textHeader}>Motivasyon ve Beslenmenin Önemi</Text>
-        <Text style={styles.textParagraph}>
-          Beslenme; büyüme, yaşamın sürdürülmesi ve sağlığın korunması için
-          besinlerin kullanılmasıdır. Beslenme yetersizliği ve dengesizliği;
-          bazı hastalıkların oluşmasında doğrudan, bazılarında ise dolaylı
-          nedendir. Bu yüzden beslenme sadece hastalık oluşması durumunda dikkat
-          edilecek bir kavram olarak görülmemeli, daha sağlıklı olmak ve
-          hastalıklardan korunmak, sakatlıkları ve erken ölümleri azaltmak
-          açısından önemli olduğu unutulmamalıdır.
-        </Text>
+        <Text style={styles.textHeader}>Günün Bilgisi</Text>
       </View>
       <View>
         <Image
@@ -24,7 +15,8 @@ const Motivation = () => {
           }}
         />
       </View>
-      <View>
+      <View style={styles.containerWindow}>
+        <Text style={styles.textHeaderSmall}>Dengeli Beslenmenin Önemi</Text>
         <Text style={styles.textParagraph}>
           Beslenme; büyüme, yaşamın sürdürülmesi ve sağlığın korunması için
           besinlerin kullanılmasıdır. Beslenme yetersizliği ve dengesizliği;
@@ -39,7 +31,7 @@ const Motivation = () => {
   );
 };
 
-export default Motivation;
+export default InformationToday;
 
 const styles = StyleSheet.create({
   containerPage: {
@@ -49,10 +41,18 @@ const styles = StyleSheet.create({
     paddingLeft: 20,
     paddingRight: 20,
   },
+  containerWindow: {
+    paddingTop: 20,
+  },
   textHeader: {
     color: "green",
     fontWeight: "bold",
     fontSize: 18,
+  },
+  textHeaderSmall: {
+    color: "green",
+    fontWeight: "bold",
+    fontSize: 16,
   },
   textParagraph: {
     color: "black",

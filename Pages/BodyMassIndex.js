@@ -1,9 +1,23 @@
-import { View, Text, StyleSheet, SafeAreaView, TextInput, Pressable} from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  SafeAreaView,
+  TextInput,
+  Pressable,
+  Alert,
+} from "react-native";
 import React from "react";
 
 const BodyMassIndex = () => {
-  const [length, setLength] = React.useState(null);
-  const [weight, setWeight] = React.useState(null);
+  const [length, setLength] = React.useState(0);
+  const [weight, setWeight] = React.useState(0);
+
+  const onPressCalculate = () =>{
+      const index = length + weight;
+      Alert.alert("Vücut kitle indeksiniz hesaplandı:", index );
+  };
+
   return (
     <View style={styles.containerPage}>
       <View>
@@ -32,9 +46,11 @@ const BodyMassIndex = () => {
             placeholder="Kilonuzu giriniz"
             keyboardType="numeric"
           />
- <Pressable>
-          <Text style={styles.button}>Hesapla</Text>
-        </Pressable>
+          <Pressable
+          onPress={() => onPressCalculate() }
+          >
+            <Text style={styles.button}>Hesapla</Text>
+          </Pressable>
         </SafeAreaView>
       </View>
     </View>
@@ -74,15 +90,15 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 5,
   },
-  button:{
-    backgroundColor: 'white',
-    color: 'green',
-    fontWeight: 'bold',
+  button: {
+    backgroundColor: "white",
+    color: "green",
+    fontWeight: "bold",
     marginTop: 20,
     marginLeft: 270,
     padding: 10,
     borderWidth: 1,
-    borderColor: 'green',
+    borderColor: "green",
     borderRadius: 5,
-  }
+  },
 });

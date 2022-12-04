@@ -10,32 +10,32 @@ const Menu = () => {
         </Pressable>
       </View>
       <View style={styles.containerInWindow}>
-      <Pressable>
+        <Pressable>
           <Text style={styles.text}>Vücut Kitle İndeksi</Text>
         </Pressable>
       </View>
       <View style={styles.containerInWindow}>
-      <Pressable>
-          <Text style={styles.text}>Besinler ce Değerleri</Text>
+        <Pressable>
+          <Text style={styles.text}>Besinler ve Değerleri</Text>
         </Pressable>
       </View>
       <View style={styles.containerInWindow}>
-      <Pressable>
+        <Pressable>
           <Text style={styles.text}>Günün Menüsü</Text>
         </Pressable>
       </View>
       <View style={styles.containerInWindow}>
-      <Pressable>
+        <Pressable>
           <Text style={styles.text}>Günün Bilgisi</Text>
         </Pressable>
       </View>
       <View style={styles.containerInWindow}>
-      <Pressable>
+        <Pressable>
           <Text style={styles.text}>Suyun Önemi</Text>
         </Pressable>
       </View>
       <View style={styles.containerInWindow}>
-      <Pressable>
+        <Pressable>
           <Text style={styles.text}>CANLI KANLI DİYETİSYEN :D</Text>
         </Pressable>
       </View>
@@ -62,6 +62,6 @@ const styles = StyleSheet.create({
   text: {
     color: "green",
     fontWeight: "bold",
-    fontSize:14,
+    fontSize: 14,
   },
 });
