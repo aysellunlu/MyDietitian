@@ -1,10 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import Footer from './Layout/Footer';
 import Header from './Layout/Header';
 import BodyMassIndex from './Pages/BodyMassIndex';
 import InformationToday from './Pages/InformationToday';
 import Menu from './Pages/Menu';
 import Motivation from './Pages/Motivation';
+import Water from './Pages/Water';
 
 export default function App() {
   return (
@@ -13,7 +15,9 @@ export default function App() {
       {/* <Menu/>
       <Motivation/>
       <BodyMassIndex/> */}
-      <InformationToday/>
+      {/* <InformationToday/> */}
+      <Water/>
+      {/* <Footer/> */}
       <StatusBar style="auto"/>
     </View>
   );
