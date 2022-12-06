@@ -6,8 +6,10 @@ import {
   TextInput,
   Pressable,
   Alert,
+  ImageBackground
 } from "react-native";
 import React from "react";
+import BackgroundImage from '../images/bgmainwhite.png';
 
 const BodyMassIndex = () => {
   const [length, setLength] = React.useState(0);
@@ -20,6 +22,12 @@ const BodyMassIndex = () => {
 
   return (
     <View style={styles.containerPage}>
+      <ImageBackground
+        source={BackgroundImage}
+        resizeMode="cover"
+        style={styles.image}
+      >
+      <View style={styles.containerOutWindow}>
       <View>
         <Text style={styles.textHeader}>Vücut Kitle İndeksi</Text>
       </View>
@@ -53,6 +61,8 @@ const BodyMassIndex = () => {
           </Pressable>
         </SafeAreaView>
       </View>
+      </View>
+      </ImageBackground>
     </View>
   );
 };
@@ -61,11 +71,11 @@ export default BodyMassIndex;
 
 const styles = StyleSheet.create({
   containerPage: {
-    backgroundColor: "white",
-    paddingTop: 35,
-    paddingBottom: 15,
-    paddingLeft: 20,
-    paddingRight: 20,
+    // backgroundColor: "white",
+    // paddingTop: 35,
+    // paddingBottom: 15,
+    // paddingLeft: 20,
+    // paddingRight: 20,
   },
   textHeader: {
     color: "green",
@@ -91,14 +101,22 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
   button: {
-    backgroundColor: "white",
+    // backgroundColor: "white",
     color: "green",
     fontWeight: "bold",
     marginTop: 20,
-    marginLeft: 270,
+    marginLeft: 260,
     padding: 10,
     borderWidth: 1,
     borderColor: "green",
     borderRadius: 5,
+  },
+  containerOutWindow: {
+    borderRadius: 10,
+    paddingTop: 50,
+    paddingBottom: 500,
+    paddingLeft:25,
+    paddingRight: 25,
+    borderColor: "#8FFF1F",
   },
 });
