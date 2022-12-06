@@ -23,11 +23,11 @@ const styles = StyleSheet.create({
     paddingLeft: 20,
   },
   text: {
-    color: "yellow",
+    color: "#CDFF7A",
     fontSize: 12,
   },
   textBold: {
-    color: "white",
+    color: "#D2FF1F",
     fontSize: 12,
     fontWeight: "bold",
   },

@@ -12,11 +12,11 @@ export default function App() {
   return (
     <View>
       <Header/>
-      {/* <Menu/>
-      <Motivation/>
-      <BodyMassIndex/> */}
+      <Menu/>
+      {/* <Motivation/> */}
+      {/* <BodyMassIndex/> */}
       {/* <InformationToday/> */}
-      <Water/>
+      {/* <Water/> */}
       {/* <Footer/> */}
       <StatusBar style="auto"/>
     </View>

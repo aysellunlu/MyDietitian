@@ -1,9 +1,17 @@
-import { View, Text, StyleSheet, Image, ScrollView } from "react-native";
+import { View, Text, StyleSheet, Image, ScrollView,ImageBackground } from "react-native";
 import React from "react";
+import BackgroundImage from '../images/bgmainwhite.png';
 
 const Motivation = () => {
   return (
     <ScrollView style={styles.containerPage}>
+      <View>
+        <ImageBackground
+        source={BackgroundImage}
+        resizeMode="cover"
+        style={styles.image}
+      >
+        <View style={styles.containerOutWindow}>
       <View>
         <Text style={styles.textHeader}>Motivasyon ve Beslenmenin Önemi</Text>
         <Text style={styles.textParagraph}>
@@ -35,6 +43,9 @@ const Motivation = () => {
           açısından önemli olduğu unutulmamalıdır.
         </Text>
       </View>
+      </View>
+      </ImageBackground>
+      </View>
     </ScrollView>
   );
 };
@@ -43,11 +54,10 @@ export default Motivation;
 
 const styles = StyleSheet.create({
   containerPage: {
-    backgroundColor: "white",
-    paddingTop: 35,
-    paddingBottom: 15,
-    paddingLeft: 20,
-    paddingRight: 20,
+    // paddingTop: 35,
+    // paddingBottom: 15,
+    // paddingLeft: 20,
+    // paddingRight: 20,
   },
   textHeader: {
     color: "green",
@@ -55,7 +65,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
   },
   textParagraph: {
-    color: "black",
+    color: "#103E00",
     fontSize: 14,
     marginTop: 20,
     lineHeight: 25,
@@ -64,5 +74,13 @@ const styles = StyleSheet.create({
     width: 350,
     height: 200,
     marginTop: 20,
+  },
+  containerOutWindow: {
+    borderRadius: 10,
+    paddingTop: 50,
+    paddingBottom: 70,
+    paddingLeft:25,
+    paddingRight: 25,
+    borderColor: "#8FFF1F",
   },
 });
