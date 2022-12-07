@@ -6,18 +6,18 @@ import {
   TextInput,
   Pressable,
   Alert,
-  ImageBackground
+  ImageBackground,
 } from "react-native";
 import React from "react";
-import BackgroundImage from '../images/bgmainwhite.png';
+import BackgroundImage from "../images/bgmainwhite.png";
 
 const BodyMassIndex = () => {
   const [length, setLength] = React.useState(0);
   const [weight, setWeight] = React.useState(0);
 
-  const onPressCalculate = () =>{
-      const index = length + weight;
-      Alert.alert("Vücut kitle indeksiniz hesaplandı:", index );
+  const onPressCalculate = () => {
+    const index = length + weight;
+    Alert.alert("Vücut kitle indeksiniz hesaplandı:", index);
   };
 
   return (
@@ -27,41 +27,39 @@ const BodyMassIndex = () => {
         resizeMode="cover"
         style={styles.image}
       >
-      <View style={styles.containerOutWindow}>
-      <View>
-        <Text style={styles.textHeader}>Vücut Kitle İndeksi</Text>
-      </View>
-      <View>
-        <Text style={styles.textParagraph}>
-          İnsanın kilosunun boyuna göre normal olup olmadığının anlaşılması için
-          kullanılır. Elde edilen değerle insanın kendisi için sağlıklı ve ideal
-          kiloya ne kadar yakın olduğunu gösterir.
-        </Text>
-      </View>
-      <View>
-        <SafeAreaView>
-          <TextInput
-            style={styles.input}
-            onChangeText={setLength}
-            value={length}
-            placeholder="Boyunuzu giriniz"
-            keyboardType="numeric"
-          />
-          <TextInput
-            style={styles.input}
-            onChangeText={setWeight}
-            value={weight}
-            placeholder="Kilonuzu giriniz"
-            keyboardType="numeric"
-          />
-          <Pressable
-          onPress={() => onPressCalculate() }
-          >
-            <Text style={styles.button}>Hesapla</Text>
-          </Pressable>
-        </SafeAreaView>
-      </View>
-      </View>
+        <View style={styles.containerOutWindow}>
+          <View>
+            <Text style={styles.textHeader}>Vücut Kitle İndeksi</Text>
+          </View>
+          <View>
+            <Text style={styles.textParagraph}>
+              İnsanın kilosunun boyuna göre normal olup olmadığının anlaşılması
+              için kullanılır. Elde edilen değerle insanın kendisi için sağlıklı
+              ve ideal kiloya ne kadar yakın olduğunu gösterir.
+            </Text>
+          </View>
+          <View>
+            <SafeAreaView>
+              <TextInput
+                style={styles.input}
+                onChangeText={setLength}
+                value={length}
+                placeholder="Boyunuzu giriniz"
+                keyboardType="numeric"
+              />
+              <TextInput
+                style={styles.input}
+                onChangeText={setWeight}
+                value={weight}
+                placeholder="Kilonuzu giriniz"
+                keyboardType="numeric"
+              />
+              <Pressable onPress={() => onPressCalculate()}>
+                <Text style={styles.button}>Hesapla</Text>
+              </Pressable>
+            </SafeAreaView>
+          </View>
+        </View>
       </ImageBackground>
     </View>
   );
@@ -115,7 +113,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     paddingTop: 50,
     paddingBottom: 500,
-    paddingLeft:25,
+    paddingLeft: 25,
     paddingRight: 25,
     borderColor: "#8FFF1F",
   },

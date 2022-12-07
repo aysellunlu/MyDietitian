@@ -79,7 +79,6 @@ const styles = StyleSheet.create({
     width: 340,
     height: 200,
     marginTop: 20,
-    
   },
   containerOutWindow: {
     borderRadius: 10,
