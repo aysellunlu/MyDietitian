@@ -2,7 +2,6 @@ import {
   StyleSheet,
   Text,
   View,
-  Button,
   Pressable,
   ImageBackground,
 } from "react-native";
